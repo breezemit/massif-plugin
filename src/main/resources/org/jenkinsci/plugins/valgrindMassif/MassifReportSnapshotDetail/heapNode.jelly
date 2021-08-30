@@ -60,7 +60,7 @@
             <td></td>
             <td class="pane" colspan="3">
             <j:set var="heapNode" value="${child}" />
-            <st:include page="/org/jenkinsci/plugins/massifReporter/MassifReportSnapshotDetail/heapNode.jelly" />
+            <st:include page="/org/jenkinsci/plugins/valgrindMassif/MassifReportSnapshotDetail/heapNode.jelly" />
             </td>
         </tr>
         </j:forEach>
