@@ -1,5 +1,6 @@
 package org.jenkinsci.plugins.valgrindMassif;
 
+import org.jenkinsci.remoting.RoleChecker;
 import hudson.FilePath;
 import hudson.Util;
 import hudson.model.AbstractBuild;
@@ -19,6 +20,9 @@ public class MassifParserResult implements FilePath.FileCallable<List<MassifRepo
     private String pattern;
     private AbstractBuild<?, ?> owner;
 
+    public void checkRoles(RoleChecker checker) throws SecurityException {
+            return;
+    }
     public MassifParserResult( String pattern, AbstractBuild<?, ?> owner )
     {
         this.pattern = pattern;

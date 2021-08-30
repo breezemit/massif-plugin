@@ -3,9 +3,9 @@ package org.jenkinsci.plugins.valgrindMassif;
 import hudson.Extension;
 import hudson.FilePath;
 import hudson.Launcher;
-import hudson.matrix.MatrixProject;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
+import hudson.matrix.MatrixProject;
 import hudson.model.BuildListener;
 import hudson.model.FreeStyleProject;
 import hudson.tasks.BuildStepDescriptor;
@@ -91,7 +91,7 @@ public class MassifPublisher extends Recorder {
         @Override
         public boolean isApplicable(Class<? extends AbstractProject> jobType) {
             return FreeStyleProject.class.isAssignableFrom(jobType)
-                    || MatrixProject.class.isAssignableFrom(jobType);
+		|| MatrixProject.class.isAssignableFrom(jobType);
         }
 
         @Override

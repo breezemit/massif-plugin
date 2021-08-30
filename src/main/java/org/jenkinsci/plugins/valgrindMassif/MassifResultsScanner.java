@@ -1,5 +1,6 @@
 package org.jenkinsci.plugins.valgrindMassif;
 
+import org.jenkinsci.remoting.RoleChecker;
 import hudson.FilePath;
 import hudson.remoting.VirtualChannel;
 import org.apache.tools.ant.DirectoryScanner;
@@ -13,6 +14,9 @@ import java.io.IOException;
 public class MassifResultsScanner implements FilePath.FileCallable<String[]> {
     private String				pattern;
 
+    public void checkRoles(RoleChecker checker) throws SecurityException {
+            return;
+    }
     public MassifResultsScanner(String pattern)
     {
         this.pattern = pattern;
