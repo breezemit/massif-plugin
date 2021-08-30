@@ -14,8 +14,9 @@ import java.io.IOException;
 public class MassifResultsScanner implements FilePath.FileCallable<String[]> {
     private String				pattern;
 
+    @Override
     public void checkRoles(RoleChecker checker) throws SecurityException {
-            return;
+            
     }
     public MassifResultsScanner(String pattern)
     {

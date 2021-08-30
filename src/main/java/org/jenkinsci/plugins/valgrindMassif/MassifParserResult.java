@@ -20,8 +20,9 @@ public class MassifParserResult implements FilePath.FileCallable<List<MassifRepo
     private String pattern;
     private AbstractBuild<?, ?> owner;
 
+    @Override
     public void checkRoles(RoleChecker checker) throws SecurityException {
-            return;
+            
     }
     public MassifParserResult( String pattern, AbstractBuild<?, ?> owner )
     {
